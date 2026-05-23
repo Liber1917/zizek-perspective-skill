@@ -1,0 +1,33 @@
+# Universal encoding & line-ending policy for perspective-skill repos
+# Ensures consistent behavior across Windows (GBK/GB18030), macOS, and Linux
+
+# Default: UTF-8, LF line endings
+* text=auto eol=lf
+
+# Markdown: always UTF-8 without BOM, LF endings
+*.md text eol=lf encoding=utf-8
+
+# JSON: always UTF-8, LF endings
+*.json text eol=lf encoding=utf-8
+
+# YAML: always UTF-8, LF endings
+*.yml text eol=lf encoding=utf-8
+*.yaml text eol=lf encoding=utf-8
+
+# Shell scripts must use LF
+*.sh text eol=lf
+
+# Python files must use LF
+*.py text eol=lf
+
+# Binary files: no normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
